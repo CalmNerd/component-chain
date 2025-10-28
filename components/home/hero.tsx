@@ -2,29 +2,45 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { AuroraText } from '@/components/magicui/aurora-text';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
+import { AnimatedGridPattern } from '../magicui/animated-grid-pattern';
+import HighlightText from '@/components/ui/highlight-text';
 
 export default function HeroSection() {
 	return (
 		<section className='relative py-16 sm:py-24 md:py-28 lg:py-36'>
+
+			<div className={cn('absolute bg-background z-10 inset-0 w-full h-full', '[mask-image:radial-gradient(600px_circle_at_center,white,rgba(255,255,255,0.8),transparent)]')}></div>
+
+			<AnimatedGridPattern
+				numSquares={10}
+				maxOpacity={0.05}
+				numOctaves={20}
+				width={68}
+				height={68}
+				duration={3}
+			/>
 			<div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-50 relative'>
 				<div className='mx-auto max-w-4xl text-center'>
-					<h1 className='text-3xl font-librebaskerville sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-shadow-xs tracking-tight text-foreground leading-tight'>
-						Find your{' '}
-						<br className='hidden sm:block'></br>
-
+					<h1 className='text-3xl font-librebaskerville md:text-5xl font-normal text-shadow-xs tracking-tight text-foreground leading-tight'>
+						Find your &nbsp;
+						<HighlightText><span className='font-semibold'>favourite</span></HighlightText>
+						{/* &nbsp; */}
+						<br className=''></br>
 						<AuroraText
 							colors={['#10b981', '#06b6d4', '#3b82f6']}
 							speed={1.5}
 						>
-							Favorite Component
+							component
 						</AuroraText>{' '}
-						<br className='hidden sm:block'></br>
+						{/* <br className='hidden sm:block'></br> */}
 						in seconds
 					</h1>
 
-					<p className='mt-4 sm:mt-6 text-sm sm:text-base leading-relaxed text-muted-foreground max-w-xl sm:max-w-2xl mx-auto text-shadow-xs px-4 sm:px-0'>
+					<p className='mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground max-w-xl sm:max-w-2xl mx-auto text-shadow-xs px-4 sm:px-0'>
 						{/* A curated list of the best Shadcn-inspired libraries, designed to help you ship faster and build better. */}
-						A curated list of the best Shadcn-inspired libraries, designed to help you build and ship lightning-fast.
+						{/* A curated list of the best Shadcn-inspired libraries, designed to help you build and ship lightning-fast. */}
+						A curated list of Shadcn-inspired libraries to help you build and ship faster.
 					</p>
 
 					<div className='mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 z-50 px-4 sm:px-0'>
@@ -62,7 +78,7 @@ export default function HeroSection() {
 			</div>
 
 			{/* Background decoration */}
-			<div className='absolute inset-0 z-0'>
+			{/* <div className='absolute inset-0 z-0'>
 				<Image
 					src='/images/hero.png'
 					alt=''
@@ -75,7 +91,7 @@ export default function HeroSection() {
 					}}
 					priority
 				/>
-			</div>
+			</div> */}
 		</section>
 	);
 }

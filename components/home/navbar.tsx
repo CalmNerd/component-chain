@@ -34,7 +34,7 @@ export default function Navbar() {
 	return (
 		<header
 			id='nd-nav'
-			className='fixed top-0 z-[9999] left-0 right-0 backdrop-blur-lg border-b transition-colors bg-background '
+			className='fixed py-1 top-0 z-[9999] left-0 right-0 backdrop-blur-lg border-b transition-colors bg-background '
 			aria-label='Main'
 		>
 			<div className='max-w-6xl mx-auto'>
@@ -44,12 +44,12 @@ export default function Navbar() {
 						className='inline-flex items-center gap-2.5 font-semibold'
 						href='/'
 					>
-						<Logo size='md' />
-						<span className='font-medium text-[15px] font-librebaskerville'>Component Chain</span>
+						<Logo size='xl' />
+						<span className='font-semibold text-xl tracking-tighter font-librebaskerville'>Component Chain</span>
 					</Link>
 
 					{/* Desktop Navigation */}
-					<ul className='hidden lg:flex flex-row items-center gap-2 px-6'>
+					{/* <ul className='hidden lg:flex flex-row items-center gap-2 px-6'>
 						{navigationItems.slice(0, 3).map((item) => (
 							<li key={item.href}>
 								<Button
@@ -61,21 +61,17 @@ export default function Navbar() {
 								</Button>
 							</li>
 						))}
-					</ul>
+					</ul> */}
 
 					{/* Right Side Actions */}
 					<div className='flex flex-row items-center justify-end gap-1.5 flex-1'>
-						<DropdownMenu>
-							<DropdownMenuTrigger asChild>
-								<Button variant="outline" onClick={() => setTheme(theme === "light" ? "dark" : "light")} size="icon">
-									<Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:-rotate-90" />
-								</Button>
-							</DropdownMenuTrigger>
-						</DropdownMenu>
+						<Sun className="h-[1.2rem] w-[1.2rem] m-1 cursor-pointer scale-100 rotate-0 transition-all dark:-rotate-90"
+							onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+						/>
 						{/* Try it Now Button */}
 						<Button
 							size='sm'
-							className='rounded-full bg-[#1A1A1A] hover:bg-[#2A2A2A] border border-[#252525] text-white'
+							className='bg-[#1A1A1A] hover:bg-[#2A2A2A] border border-[#252525] text-white'
 						>
 							<Link href='/docs'>Try it Now</Link>
 						</Button>
@@ -116,7 +112,7 @@ export default function Navbar() {
 								className='w-[300px] sm:w-[400px]'
 							>
 								<div className='flex flex-col gap-4 mt-8'>
-									{navigationItems.map((item) => (
+									{/* {navigationItems.map((item) => (
 										<Button
 											key={item.href}
 											variant='ghost'
@@ -130,7 +126,7 @@ export default function Navbar() {
 												{item.label}
 											</Link>
 										</Button>
-									))}
+									))} */}
 									<Button
 										variant='ghost'
 										className='justify-start'

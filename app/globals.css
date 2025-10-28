@@ -44,6 +44,34 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-aurora: aurora 8s ease-in-out infinite alternate;
+
+  @keyframes aurora {
+    0% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
+    }
+
+    25% {
+      background-position: 50% 100%;
+      transform: rotate(5deg) scale(1.1);
+    }
+
+    50% {
+      background-position: 100% 50%;
+      transform: rotate(-3deg) scale(0.95);
+    }
+
+    75% {
+      background-position: 50% 0%;
+      transform: rotate(3deg) scale(1.05);
+    }
+
+    100% {
+      background-position: 0% 50%;
+      transform: rotate(-5deg) scale(0.9);
+    }
+  }
 }
 
 :root {
@@ -119,41 +147,40 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
 .bg-dashed {
-	background-image: linear-gradient(
-		45deg,
-		var(--border) 12.5%,
-		transparent 12.5%,
-		transparent 50%,
-		var(--border) 50%,
-		var(--border) 62.5%,
-		transparent 62.5%,
-		transparent 100%
-	);
-	background-size: 0.25rem 0.25rem;
-	border-top: 1px solid var(--border);
-	border-bottom: 1px solid var(--border);
+  background-image: linear-gradient(45deg,
+      var(--border) 12.5%,
+      transparent 12.5%,
+      transparent 50%,
+      var(--border) 50%,
+      var(--border) 62.5%,
+      transparent 62.5%,
+      transparent 100%);
+  background-size: 0.25rem 0.25rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .no-scrollbar::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .no-scrollbar {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .no-scrollbar::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .no-scrollbar {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

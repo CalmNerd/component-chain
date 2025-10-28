@@ -3,7 +3,7 @@
 import { Check, Heart, Rocket, Code, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { HighlightText } from '@/components/home/features';
+import HighlightText from '@/components/ui/highlight-text';
 
 export default function Pricing() {
 	const coreFeatures = [
