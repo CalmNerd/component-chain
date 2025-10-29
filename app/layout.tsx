@@ -49,8 +49,8 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
-          <div className="fixed top-16 left-0 right-0 bottom-0 overflow-y-auto flex flex-col">
-            <div className='max-w-6xl min-w-0 mx-auto flex-1 flex flex-col min-h-full'>
+          <div className="fixed top-16 left-0 right-0 bottom-0 overflow-y-auto overflow-x-hidden flex flex-col">
+            <div className='max-w-6xl min-w-0 mx-auto flex-1 flex flex-col min-h-full w-full'>
               {children}
             </div>
           </div>

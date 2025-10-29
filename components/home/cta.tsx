@@ -48,14 +48,14 @@ export default function CTA() {
 					<div className='flex flex-row gap-3 sm:gap-4 justify-center items-center z-20'>
 						<Button
 							size='lg'
-							className='px-6 sm:px-8 w-auto'
+							className='px-3 sm:px-8 w-auto'
 						>
 							Submit a Library
 						</Button>
 						<Button
 							variant='outline'
 							size='lg'
-							className='px-6 sm:px-8 w-auto'
+							className='px-3 sm:px-8 w-auto'
 							asChild
 						>
 							<a
