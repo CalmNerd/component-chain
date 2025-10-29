@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import GithubIcon from '@/components/icons/github';
+import { GithubRoundedIcon } from '@/components/icons/github';
 import { Logo } from '../icons/logo';
 import { cn } from '@/lib/utils';
 import { AnimatedGridPattern } from '../ui/animated-grid-pattern';
@@ -64,7 +64,7 @@ export default function CTA() {
 								rel='noopener noreferrer'
 								className='flex items-center gap-2'
 							>
-								<GithubIcon className='h-4 w-4' />
+								<GithubRoundedIcon className='h-4 w-4' />
 								Star on GitHub
 							</a>
 						</Button>

@@ -43,14 +43,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="overflow-hidden">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${bricolageGrotesque.variable} ${libreBaskerville.variable} ${figtree.className} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bricolageGrotesque.variable} ${libreBaskerville.variable} ${figtree.className} antialiased overflow-hidden h-screen`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
-          <div className=' px-3 sm:px-6 lg:px-8 max-w-6xl mx-auto'>{children}</div>
-          <Footer />
+          <div className="fixed top-16 left-0 right-0 bottom-0 overflow-y-auto flex flex-col">
+            <div className='max-w-6xl min-w-0 mx-auto flex-1 flex flex-col min-h-full'>
+              {children}
+            </div>
+          </div>
+          {/* <div className="fixed max-w-6xl mx-auto bottom-0 left-0 right-0 z-50">
+            <Footer />
+          </div> */}
         </ThemeProvider>
       </body>
     </html>

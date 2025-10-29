@@ -210,13 +210,13 @@ export default function QuickSearch({
   const hasFilters = hasActiveFilters(filters);
 
   return (
-    <section className={pathname === '/' ? 'py-20' : ''}>
+    <section className={pathname === '/' ? '' : ''}>
       <div className='max-w-full mx-auto'>
         {/* Header - Only show on home page */}
         {pathname === '/' && (
-          <div className='text-center mb-12'>
-            <h2 className='text-2xl sm:text-3xl md:text-4xl mb-4'>
-              Everything you need to{' '}
+          <div className='text-center my-12'>
+            <h2 className='font-librebaskerville text-2xl sm:text-3xl md:text-4xl mb-4'>
+              Everything you need to&nbsp;
               <HighlightText>ship fast</HighlightText>
             </h2>
             <p className='text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto'>
@@ -406,7 +406,7 @@ export default function QuickSearch({
 
             {/* Pagination */}
             {searchResult.totalPages > 1 && (
-              <div className='mt-8'>
+              <div className='my-4'>
                 <Pagination>
                   <PaginationContent>
                     <PaginationItem>

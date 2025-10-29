@@ -20,7 +20,7 @@ export default function HighlightText({
 }: HighlightTextProps) {
     return (
         <motion.span
-            className={`relative inline-block ${className}`}
+            className={`relative inline-block py-0.5 ${className}`}
             initial={{ color: '#fff' }}
             whileInView={{ color: textColor }}
             transition={{ duration: 0.3, delay: delay + 0.2 }}

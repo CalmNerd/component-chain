@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ICON_SIZE = 32;
 
 export const PostgresIcon = ({ className }: { className?: string }) => (
@@ -485,12 +483,12 @@ export const InstallIcon = ({ className }: { className?: string }) => (
 			<mask id='SVGWNgSieUZ'>
 				<g
 					fill='none'
-					stroke-linejoin='round'
-					stroke-width='4'
+					strokeLinejoin='round'
+					strokeWidth='4'
 				>
 					<path
 						stroke='#fff'
-						stroke-linecap='round'
+						strokeLinecap='round'
 						d='M41.4 11.551L36.333 5H11.667l-5.083 6.551'
 					/>
 					<path
@@ -500,7 +498,7 @@ export const InstallIcon = ({ className }: { className?: string }) => (
 					/>
 					<path
 						stroke='#000'
-						stroke-linecap='round'
+						strokeLinecap='round'
 						d='m32 27l-8 8l-8-8m7.992-8v16'
 					/>
 				</g>

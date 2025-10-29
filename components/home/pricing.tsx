@@ -2,7 +2,6 @@
 
 import { Check, Heart, Rocket, Code, Zap, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import HighlightText from '@/components/ui/highlight-text';
 
 export default function Pricing() {
@@ -48,7 +47,7 @@ export default function Pricing() {
 		<section className='pt-16'>
 			<div className='text-center mb-12 px-4 sm:px-6 lg:px-8'>
 				<h2 className='font-librebaskerville text-2xl sm:text-3xl font-semibold mb-4'>
-					100% <HighlightText> Free Forever</HighlightText>
+					100% &nbsp;<HighlightText>Free Forever</HighlightText>
 				</h2>
 				<p className='text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto'>
 					A free, open-source directory to help developers discover amazing component

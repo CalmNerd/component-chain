@@ -40,7 +40,7 @@ export default function Features() {
 		<section className='pt-16'>
 			<div className='max-w-full mx-auto'>
 				<div className='text-center mb-16 px-4 sm:px-6 lg:px-8'>
-					<h2 className='text-2xl sm:text-3xl md:text-4xl mb-4'>
+					<h2 className='font-librebaskerville text-2xl sm:text-3xl md:text-4xl mb-4'>
 						Everything you need to{' '}
 						<HighlightText>build faster</HighlightText>
 					</h2>

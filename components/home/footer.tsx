@@ -1,19 +1,26 @@
+'use client';
+
 // import GithubIcon from '@/components/icons/github';
 // import XIcon from '@/components/icons/x';
-// import { Logo } from "../icons/logo";
+import { usePathname } from 'next/navigation';
+import { Logo } from "../icons/logo";
 
 export default function Footer() {
+	const pathname = usePathname();
+	// Show border-top when not on home page
+	const showBorderTop = pathname !== '/';
+	
 	return (
-		<footer className='border-t border-border border-dotted z-50 bg-background'>
-			<div className='max-w-6xl mx-auto px-6 py-6'>
+		<footer className={`border-x ${showBorderTop ? 'border-t' : ''} border-border z-50 bg-background`}>
+			<div className='max-w-6xl mx-auto px-2 py-6'>
 				<div className='flex flex-col sm:flex-row justify-between items-center gap-4'>
 					<p className='flex items-center gap-1 text-sm text-muted-foreground'>
 						@{new Date().getFullYear()} 
-						{/* <Logo size='lg' className="inline-block" />  */}
+						<Logo size='md' className="inline-block" />
 						<span className="font-semibold">Component Chain</span>
 						{/* Built with ❤️ for passionate developers. Free forever. */}
 					</p>
-					<div className='flex text-xs md:text-sm text-muted-foreground'>
+					<div className='flex font-medium text-xs md:text-sm text-muted-foreground'>
 						{/* <a 
 							href='https://github.com' 
 							className='text-muted-foreground hover:text-primary transition-colors'

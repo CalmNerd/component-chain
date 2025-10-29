@@ -1,18 +1,10 @@
-/**
- * Dynamic Filter Page
- * 
- * Route: /libraries-list/{filterType}/{filterValue}?additional-filters
- * Handles all filter types: library, framework, tags, popularity
- * Displays libraries filtered by the selected criteria
- */
-
 'use client';
 
 import { useSearchParams, usePathname, useParams } from 'next/navigation';
-import { useEffect } from 'react';
 import QuickSearchBase from '@/components/search/quick-search';
 import HighlightText from '@/components/ui/highlight-text';
 import { parseSearchParams } from '@/lib/utils/search';
+import Footer from '@/components/home/footer';
 
 export default function FilterResultsPage() {
   const searchParams = useSearchParams();
@@ -73,28 +65,31 @@ export default function FilterResultsPage() {
   };
 
   return (
-    <main className='mt-16 mb-12 max-w-full mx-auto'>
-      <section className='py-20'>
-        <div className='max-w-full mx-auto px-4 sm:px-6 lg:px-8'>
-          {/* Dynamic Header */}
-          <div className='text-center'>
-            <h2 className='text-2xl sm:text-3xl md:text-4xl mb-4'>
-              Libraries matching:{' '}
-              <HighlightText>{getHeaderText()}</HighlightText>
-            </h2>
-            <p className='text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto'>
-              Browse through our curated collection of Shadcn-inspired libraries
-              filtered by your selection.
-            </p>
+    <main className='max-w-full mx-auto flex flex-col gap-8 min-h-full'>
+      <div className='flex-1'>
+        <section className=''>
+          <div className='max-w-full mx-auto px-4 sm:px-6 lg:px-8'>
+            {/* Dynamic Header */}
+            <div className='text-center py-12'>
+              <h2 className='text-2xl sm:text-3xl md:text-4xl mb-4'>
+                Libraries matching:{' '}
+                <HighlightText>{getHeaderText()}</HighlightText>
+              </h2>
+              <p className='text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto'>
+                Browse through our curated collection of Shadcn-inspired libraries
+                filtered by your selection.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Search Results */}
-      <QuickSearchBase 
-        showDefaultResults={false}
-        enableNavigation={true}
-      />
+        {/* Search Results */}
+        <QuickSearchBase 
+          showDefaultResults={false}
+          enableNavigation={true}
+        />
+      </div>
+      <Footer />
     </main>
   );
 }

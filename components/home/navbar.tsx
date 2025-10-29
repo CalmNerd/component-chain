@@ -4,48 +4,41 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Logo } from '@/components/icons/logo';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
-import GithubIcon from '@/components/icons/github';
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Moon, Sun } from "lucide-react"
+// import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from '@/components/ui/sheet';
+// import { Menu, SendIcon, X } from 'lucide-react';
 import { useTheme } from "next-themes"
+import { ThemeToggleIcon } from '../icons/icons';
 
 export default function Navbar() {
-	const [isOpen, setIsOpen] = useState(false);
+	// const [isOpen, setIsOpen] = useState(false);
 	const { setTheme, theme } = useTheme()
-	const navigationItems = [
-		{ href: '/docs', label: 'Documentation' },
-		{
-			href: 'https://github.com/MVP-LaunchPad-Labs/free-ship-fast',
-			label: 'Templates',
-		},
-		{ href: '/builder', label: 'Builder' },
-		{ href: '/blog', label: 'Blog' },
-		{ href: '/showcase', label: 'Showcase' },
-		{ href: '/sponsors', label: 'Sponsors' },
-	];
+	// const navigationItems = [
+	// 	{ href: '/docs', label: 'Documentation' },
+	// 	{
+	// 		href: 'https://github.com/CalmNerd/component-chain',
+	// 		label: 'Templates',
+	// 	},
+	// 	{ href: '/builder', label: 'Builder' },
+	// 	{ href: '/blog', label: 'Blog' },
+	// 	{ href: '/showcase', label: 'Showcase' },
+	// 	{ href: '/sponsors', label: 'Sponsors' },
+	// ];
 
 	return (
 		<header
 			id='nd-nav'
-			className='fixed py-1 top-0 z-[9999] left-0 right-0 backdrop-blur-lg border-b transition-colors bg-background '
+			className='fixed py-1 top-0 z-[9999] -left-2 right-0 backdrop-blur-lg border-b transition-colors'
 			aria-label='Main'
 		>
-			<div className='max-w-6xl mx-auto'>
-				<nav className='flex h-14 w-full items-center px-4'>
+			<div className='max-w-6xl px-2 mx-auto'>
+				<nav className='flex h-14 w-full items-center'>
 					{/* Logo */}
 					<Link
 						className='inline-flex items-center gap-2.5 font-semibold'
 						href='/'
 					>
 						<Logo size='xl' />
-						<span className='font-semibold text-xl tracking-tighter font-librebaskerville'>Component Chain</span>
+						<span className='hidden sm:inline-block font-semibold text-sm sm:text-xl tracking-tighter font-librebaskerville'>Component Chain</span>
 					</Link>
 
 					{/* Desktop Navigation */}
@@ -65,35 +58,39 @@ export default function Navbar() {
 
 					{/* Right Side Actions */}
 					<div className='flex flex-row items-center justify-end gap-1.5 flex-1'>
-						<Sun className="h-[1.2rem] w-[1.2rem] m-1 cursor-pointer scale-100 rotate-0 transition-all dark:-rotate-90"
-							onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-						/>
-						{/* Try it Now Button */}
+						{/* Try it Now Button - Hidden on mobile, shown in menu */}
 						<Button
 							size='sm'
-							className='bg-[#1A1A1A] hover:bg-[#2A2A2A] border border-[#252525] text-white'
+							variant='ghost'
+							asChild
 						>
-							<Link href='/docs'>Submit</Link>
+							<Link href='#'>Submit Library</Link>
 						</Button>
 
+						<div className='h-4 w-px bg-border'></div>
+
+						<div onClick={() => setTheme(theme === "light" ? "dark" : "light")} className='cursor-pointer'>
+							<ThemeToggleIcon className='size-5' />
+						</div>
+
 						{/* GitHub Link */}
-						<Button
+						{/* <Button
 							variant='ghost'
 							size='sm'
 							asChild
-							className='hidden lg:inline-flex'
+							className='inline-flex'
 						>
 							<Link
-								href='https://github.com/MVP-LaunchPad-Labs/free-ship-fast'
+								href='https://github.com/CalmNerd/component-chain'
 								rel='noreferrer noopener'
 								target='_blank'
 							>
 								<GithubIcon className='size-5' />
 							</Link>
-						</Button>
+						</Button> */}
 
 						{/* Mobile Menu */}
-						<Sheet
+						{/* <Sheet
 							open={isOpen}
 							onOpenChange={setIsOpen}
 						>
@@ -103,48 +100,56 @@ export default function Navbar() {
 									size='sm'
 									className='lg:hidden'
 								>
-									<Menu className='size-5' />
-									<span className='sr-only'>Toggle Menu</span>
+									{isOpen ? (
+										<X className='size-5' />
+									) : (
+										<Menu className='size-5' />
+									)}
+									<span className='sr-only'>
+										{isOpen ? 'Close Menu' : 'Open Menu'}
+									</span>
 								</Button>
 							</SheetTrigger>
 							<SheetContent
 								side='right'
-								className='w-[300px] sm:w-[400px]'
+								className='w-[300px] sm:w-[400px] mt-16'
 							>
-								<div className='flex flex-col gap-4 mt-8'>
-									{/* {navigationItems.map((item) => (
-										<Button
-											key={item.href}
-											variant='ghost'
-											className='justify-start'
-											asChild
-										>
-											<Link
-												href={item.href}
-												onClick={() => setIsOpen(false)}
-											>
-												{item.label}
-											</Link>
-										</Button>
-									))} */}
+								<SheetHeader>
+									<SheetTitle className='text-xl'>Menu</SheetTitle>
+								</SheetHeader>
+								<div className='flex flex-col gap-4 px-4'>
 									<Button
+										size='sm'
 										variant='ghost'
-										className='justify-start'
+										className='justify-start rounded-none'
 										asChild
 									>
 										<Link
-											href='https://github.com/MVP-LaunchPad-Labs/free-ship-fast'
+											href='#'
+											onClick={() => setIsOpen(false)}
+										>
+											<SendIcon className='size-4 mr-1' />
+											Submit a Library
+										</Link>
+									</Button>
+									<Button
+										variant='ghost'
+										className='justify-start rounded-none'
+										asChild
+									>
+										<Link
+											href='https://github.com/CalmNerd/component-chain'
 											rel='noreferrer noopener'
 											target='_blank'
 											onClick={() => setIsOpen(false)}
 										>
-											<GithubIcon className='size-4 mr-2' />
+											<GithubIcon className='size-4 mr-1' />
 											GitHub
 										</Link>
 									</Button>
 								</div>
 							</SheetContent>
-						</Sheet>
+						</Sheet> */}
 					</div>
 				</nav>
 			</div>
