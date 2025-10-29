@@ -1,40 +1,40 @@
 'use client';
 
-import { Check, Heart, Rocket, Code, Zap } from 'lucide-react';
+import { Check, Heart, Rocket, Code, Zap, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import HighlightText from '@/components/ui/highlight-text';
 
 export default function Pricing() {
 	const coreFeatures = [
-		'Complete Next.js 15 starter template',
-		'Authentication system with Better Auth',
-		'Database integration with postgres or mongodb',
-		'Payment processing with stripe or lemonsqueezy',
-		'Email system with resend',
+		'Advanced search & filtering',
+		'Tag-based categorization',
+		'Framework-specific filtering',
+		'GitHub stats & metrics',
+		'Direct links to libraries',
 	];
 
 	const uiFeatures = [
-		'UI components with shadcn/ui',
-		'Tailwind CSS styling',
+		'Beautiful library cards',
 		'Responsive design',
 		'Dark/Light mode support',
-		'Mobile-first approach',
+		'Quick preview information',
+		'Mobile-friendly interface',
 	];
 
 	const devFeatures = [
-		'TypeScript configuration',
-		'SEO optimization',
-		'Docker setup',
-		'Deployment guides',
-		'Hot reload & fast refresh',
+		'Curated quality libraries',
+		'Regular updates & additions',
+		'Community contributions',
+		'Open source platform',
+		'Easy navigation',
 	];
 
 	const supportFeatures = [
-		'Comprehensive documentation',
-		'Community support',
-		'Regular updates',
-		'Example implementations',
+		'Free to browse & use',
+		'No signup required',
+		'Submit your library',
+		'Community-driven',
 	];
 
 	const featureSections = [
@@ -47,13 +47,12 @@ export default function Pricing() {
 	return (
 		<section className='pt-16'>
 			<div className='text-center mb-12 px-4 sm:px-6 lg:px-8'>
-				<h2 className='text-2xl sm:text-3xl font-semibold mb-4'>
+				<h2 className='font-librebaskerville text-2xl sm:text-3xl font-semibold mb-4'>
 					100% <HighlightText> Free Forever</HighlightText>
 				</h2>
 				<p className='text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto'>
-					Our contribution to passionate entrepreneurs and dreamers who want to
-					turn their ideas into reality. No hidden costs, no premium tiers, no
-					catch - everything is completely free.
+					A free, open-source directory to help developers discover amazing component
+					libraries. No hidden costs, no premium tiers, no catch - everything is completely free.
 				</p>
 			</div>
 
@@ -65,7 +64,7 @@ export default function Pricing() {
 						<div className='text-center space-y-4'>
 							<h3 className='text-xl sm:text-2xl'>Free Forever</h3>
 							<p className='text-sm sm:text-base text-muted-foreground'>
-								Everything you need to ship fast
+								Discover amazing component libraries
 							</p>
 							<div className='py-3'>
 								<span className='text-3xl sm:text-4xl font-bold'>$0</span>
@@ -79,7 +78,7 @@ export default function Pricing() {
 							</Button>
 
 							<p className='text-xs text-muted-foreground pt-3'>
-								No credit required • Start building immediately • Built with love
+								No signup required • Browse immediately • Built with love
 							</p>
 						</div>
 					</div>
@@ -89,7 +88,7 @@ export default function Pricing() {
 				<div className='sm:col-span-1 lg:col-span-6 lg:row-span-2 border-b border-border border-dotted'>
 					<div className='h-full p-4 sm:p-6'>
 						<div className='flex items-center gap-2 mb-4'>
-							<Rocket className='h-5 w-5 text-primary' />
+							<Search className='h-5 w-5 text-primary' />
 							<h4 className='text-base sm:text-lg font-medium'>Core Features</h4>
 						</div>
 						<div className='space-y-2'>
@@ -183,8 +182,8 @@ export default function Pricing() {
 						<div className='text-center w-full'>
 							<h4 className='text-sm sm:text-base font-medium mb-3'>Our Mission</h4>
 							<p className='text-xs text-muted-foreground leading-relaxed'>
-								Great ideas shouldn't be limited by budget. This is our way of
-								giving back to passionate builders.
+								Help developers discover amazing component libraries faster. This is our way of
+								giving back to the developer community.
 							</p>
 						</div>
 					</div>
@@ -195,13 +194,12 @@ export default function Pricing() {
 					<div className='h-full p-4 sm:p-6 flex items-center justify-center'>
 						<div className='text-center max-w-3xl'>
 							<h3 className='text-lg sm:text-xl font-medium mb-4'>
-								Built for Passionate Entrepreneurs
+								Built for the Developer Community
 							</h3>
 							<p className='text-xs sm:text-sm text-muted-foreground leading-relaxed'>
-								We believe great ideas shouldn't be limited by budget. This is our
-								way of giving back to the entrepreneurial community and helping turn
-								dreams into successful startups. Every feature, every component,
-								every line of code - completely free for passionate builders like
+								We believe finding the right components shouldn't be time-consuming. This is our
+								way of giving back to developers and helping them discover amazing libraries faster.
+								Every search, every filter, every library - completely free for developers like
 								you.
 							</p>
 						</div>

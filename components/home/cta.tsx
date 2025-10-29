@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import GithubIcon from '@/components/icons/github';
 import { Logo } from '../icons/logo';
 import { cn } from '@/lib/utils';
-import { AnimatedGridPattern } from '../magicui/animated-grid-pattern';
+import { AnimatedGridPattern } from '../ui/animated-grid-pattern';
 
 export default function CTA() {
 	return (
@@ -21,7 +21,7 @@ export default function CTA() {
 				maxOpacity={0.1}
 				duration={3}
 				className={cn(
-					"[mask-image:radial-gradient(400px_circle_at_top_left,white,rgba(255,255,255,0.6),transparent)]",
+					"hidden md:block [mask-image:radial-gradient(400px_circle_at_top_left,white,rgba(255,255,255,0.6),transparent)]",
 					"inset-x-0 inset-y-0 h-[200%]"
 				)}
 			/>
@@ -30,32 +30,32 @@ export default function CTA() {
 				maxOpacity={0.1}
 				duration={3}
 				className={cn(
-					"[mask-image:radial-gradient(400px_circle_at_top_right,white,rgba(255,255,255,0.6),transparent)]",
-					"inset-x-0 inset-y-0 h-[200%]"
+					"hidden md:block [mask-image:radial-gradient(400px_circle_at_top_right,white,rgba(255,255,255,0.6),transparent)]",
+					"inset-x-[8px] inset-y-0 h-[200%]"
 				)}
 			/>
-			<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+			<div className='max-w-full mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='text-center relative'>
 					<div className='relative inline-block'>
-						<h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-4 sm:mb-6 relative z-10'>
+						<h2 className='font-librebaskerville text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-4 sm:mb-6 relative z-10'>
 							Ready to get started?
 						</h2>
 					</div>
 					<p className='text-sm sm:text-base lg:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-xl sm:max-w-2xl mx-auto px-2 sm:px-0'>
-						Join thousands of passionate entrepreneurs already using our
-						platform to build and grow their businesses.
+						Join the community discovering amazing component libraries.
+						Submit your library or explore what others have built.
 					</p>
-					<div className='flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center z-20'>
+					<div className='flex flex-row gap-3 sm:gap-4 justify-center items-center z-20'>
 						<Button
 							size='lg'
-							className='px-6 sm:px-8 w-full sm:w-auto'
+							className='px-6 sm:px-8 w-auto'
 						>
-							Get Started Free
+							Submit a Library
 						</Button>
 						<Button
 							variant='outline'
 							size='lg'
-							className='px-6 sm:px-8 w-full sm:w-auto'
+							className='px-6 sm:px-8 w-auto'
 							asChild
 						>
 							<a

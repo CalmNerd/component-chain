@@ -65,29 +65,28 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
 export default function FAQs() {
 	const faqs = [
 		{
-			question: 'What do I get exactly?',
+			question: 'What is component-awesome?',
 			answer: (
 				<div className='space-y-4'>
-					<p><strong>1/</strong> The complete Next.js 15 starter with all the boilerplate code you need to run an online business: payment system (Stripe & LemonSqueezy), database integration, authentication, blog, UI components, and much more.</p>
-					<p>The repo is built with:</p>
+					<p><strong>component-awesome</strong> is a curated directory of the best Shadcn-inspired component libraries. It helps developers discover high-quality UI component libraries quickly and efficiently.</p>
+					<p>You can:</p>
 					<ul className='list-disc list-inside ml-4 space-y-1'>
-						<li>TypeScript</li>
-						<li>/app router</li>
-						<li>Modern tech stack with multiple options</li>
+						<li>Search and filter libraries by framework, tags, or keywords</li>
+						<li>View GitHub stats, descriptions, and links</li>
+						<li>Discover new libraries as they\'re added</li>
+						<li>Submit your own component library</li>
 					</ul>
-					<p><strong>2/</strong> Comprehensive documentation to help you set up your app from scratch and ship fast.</p>
-					<p><strong>3/</strong> Access to our community Discord and ongoing support.</p>
-					<p>All completely free - no hidden costs, no premium tiers, no catch.</p>
+					<p>All completely free - no signup required, no hidden costs, no catch.</p>
 				</div>
 			)
 		},
 		{
-			question: 'Why is Component Chain completely free?',
+			question: 'Why is component-awesome completely free?',
 			answer: (
 				<div className='space-y-4'>
-					<p>Component Chain is our way of giving back to the entrepreneurial and developer community.</p>
-					<p>We believe great ideas shouldn\'t be limited by budget. By making this completely free and open source, we\'re helping passionate builders turn their dreams into successful startups.</p>
-					<p>No venture capital, no monetization strategy - just our contribution to help you ship faster.</p>
+					<p>component-awesome is our way of giving back to the developer community.</p>
+					<p>We believe finding the right component libraries shouldn\'t be time-consuming or difficult. By making this completely free and open source, we\'re helping developers discover amazing components faster.</p>
+					<p>No monetization strategy - just our contribution to help developers build better projects.</p>
 				</div>
 			)
 		},
@@ -95,61 +94,61 @@ export default function FAQs() {
 			question: 'Is it really 100% free?',
 			answer: (
 				<div className='space-y-4'>
-					<p>Yes! Component Chain is completely free and open source. You get:</p>
+					<p>Yes! component-awesome is completely free and open source. You get:</p>
 					<ul className='list-disc list-inside space-y-1'>
-						<li>Full access to all code and components</li>
-						<li>Complete documentation</li>
-						<li>Community support</li>
-						<li>Regular updates and improvements</li>
+						<li>Full access to browse all libraries</li>
+						<li>Advanced search and filtering</li>
+						<li>No signup required</li>
+						<li>Regular updates with new libraries</li>
 						<li>No licensing fees ever</li>
 					</ul>
-					<p>You only pay for the external services you choose to use (hosting, databases, etc.), but the codebase itself is completely free.</p>
+					<p>You can browse, search, and discover libraries completely free - no account needed!</p>
 				</div>
 			)
 		},
 		{
-			question: 'Does Component Chain work with AI (Cursor, Copilot)?',
-			answer: 'Yes, Component Chain works perfectly with AI coding assistants like Cursor and GitHub Copilot. The clean, well-structured TypeScript codebase makes it easy for AI tools to understand and assist with development.'
+			question: 'How do I search for libraries?',
+			answer: 'You can search by library name, description, or tags. Use the advanced filters to narrow down by framework (React, Vue, etc.), tags, or other criteria. The quick search on the homepage lets you instantly find libraries as you type.'
 		},
 		{
-			question: 'What tech stack does Component Chain use?',
-			answer: 'Component Chain is built with TypeScript and Next.js 15 using the /app router. It includes multiple options for database (PostgreSQL/MongoDB), authentication systems, payments (Stripe & LemonSqueezy), email services, and much more - all pre-configured and ready to use.'
+			question: 'What types of libraries are included?',
+			answer: 'We focus on Shadcn-inspired component libraries - beautiful, modern UI component collections that help developers build better interfaces faster. Libraries are curated for quality, active maintenance, and useful features.'
 		},
 		{
-			question: 'Can I choose between different payment providers?',
-			answer: 'Yes! Component Chain comes with both Stripe and LemonSqueezy integrations built-in. You can choose either one or use both depending on your business needs and target markets.'
+			question: 'Can I submit my own library?',
+			answer: 'Yes! We welcome submissions from the community. You can submit your component library through our submission process. All libraries are reviewed to ensure quality and relevance before being added to the directory.'
 		},
 		{
-			question: 'My tech stack is different, can I still use it?',
-			answer: 'While Component Chain is built with a specific stack (Next.js, TypeScript, etc.), many concepts and components can be adapted to other frameworks. However, you\'ll get the most value using it with the intended tech stack.'
+			question: 'How do libraries get added?',
+			answer: 'Libraries are added through community submissions and our own research. We review each library to ensure it meets our quality standards - active maintenance, good documentation, useful components, and Shadcn-inspired design principles.'
 		},
 		{
-			question: 'Is it a website template?',
-			answer: 'No, Component Chain is much more than a template. It\'s a complete boilerplate with backend functionality, database integration, payment processing, authentication, and more - everything you need to build a SaaS product.'
+			question: 'Is this a component library itself?',
+			answer: 'No, component-awesome is a directory and discovery platform. We help you find component libraries, but the actual libraries are maintained by their respective authors. Each library listing includes direct links to the library\'s GitHub and website.'
 		},
 		{
-			question: 'Is Component Chain better than other boilerplates?',
-			answer: 'Component Chain focuses on helping you ship fast with battle-tested code, comprehensive documentation, and ongoing support. The community and regular updates make it a solid choice for entrepreneurs who want to launch quickly.'
+			question: 'How is this different from other directories?',
+			answer: 'component-awesome focuses specifically on Shadcn-inspired libraries with a beautiful, curated interface. We emphasize quality over quantity and make it easy to discover exactly what you need through powerful search and filtering.'
 		},
 		{
-			question: 'Is Component Chain better than AI tools like Lovable or Bolt?',
-			answer: 'Component Chain gives you full control over production-ready code that you own completely. While AI tools are great for prototyping, Component Chain provides enterprise-grade architecture that scales with your business.'
+			question: 'Are the libraries free to use?',
+			answer: 'Each library has its own license terms. Most libraries in our directory are open source and free, but we recommend checking the individual library\'s license before using it in your projects. Links to each library\'s repository are provided for easy verification.'
 		},
 		{
 			question: 'Are there any hidden costs?',
-			answer: 'Absolutely no hidden costs! Component Chain is completely free forever. You only pay for the external services you choose to use (like hosting, databases, email services, etc.), but the codebase itself has no ongoing fees or licensing costs.'
+			answer: 'Absolutely no hidden costs! component-awesome is completely free forever. You can browse, search, and discover libraries without any fees. The libraries themselves may have their own terms, but accessing our directory is always free.'
 		},
 		{
-			question: 'How often is Component Chain updated?',
-			answer: 'Component Chain is regularly updated with new features, security patches, and improvements. Updates are pushed to the repository and you\'ll be notified of major releases through our community channels.'
+			question: 'How often is the directory updated?',
+			answer: 'component-awesome is regularly updated with new libraries as they\'re discovered and submitted. We also update library information when GitHub stats change or new features are added. Check back regularly to discover the latest additions!'
 		},
 		{
-			question: 'Can I contribute to Component Chain?',
-			answer: 'Yes! Since Component Chain is open source, you can contribute to it. Whether it\'s bug fixes, new features, or documentation improvements, your contributions help make Component Chain better for everyone.'
+			question: 'Can I contribute to component-awesome?',
+			answer: 'Yes! Since component-awesome is open source, you can contribute in many ways: submit libraries, suggest improvements, report issues, or contribute code. Your contributions help make component-awesome better for everyone.'
 		},
 		{
-			question: 'What database options are available?',
-			answer: 'Component Chain comes with support for both PostgreSQL and MongoDB. You can choose the database that best fits your project requirements and easily switch between them using our configuration system.'
+			question: 'What frameworks are supported?',
+			answer: 'We include libraries for various frameworks including React, Vue, Angular, Svelte, and more. Use the framework filter to find libraries specific to your preferred technology stack.'
 		}
 	];
 
@@ -159,11 +158,11 @@ export default function FAQs() {
 				{/* Title Section - Left */}
 				<div className='col-span-12 md:col-span-5 '>
 					<div className='p-8 pr-12 md:sticky md:top-8 py-16'>
-						<h2 className='text-3xl font-semibold mb-4'>Frequently Asked Questions</h2>
+						<h2 className='font-librebaskerville text-3xl font-semibold mb-4'>Frequently Asked Questions</h2>
 						<p className='text-muted-foreground'>
 							Have another question? Contact us on{' '}
-							<a href='#' className='text-primary hover:underline'>Twitter</a> or by{' '}
-							<a href='#' className='text-primary hover:underline'>email</a>.
+							<a href='https://x.com/Calmnrd' className='text-primary hover:underline'>Twitter</a> or reach out{' '}
+							<a href='https://www.mohitsingh.space/' className='text-primary hover:underline'>here</a>.
 						</p>
 					</div>
 				</div>

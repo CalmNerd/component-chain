@@ -1,16 +1,20 @@
-import GithubIcon from '@/components/icons/github';
-import XIcon from '@/components/icons/x';
+// import GithubIcon from '@/components/icons/github';
+// import XIcon from '@/components/icons/x';
+// import { Logo } from "../icons/logo";
 
 export default function Footer() {
 	return (
 		<footer className='border-t border-border border-dotted z-50 bg-background'>
 			<div className='max-w-6xl mx-auto px-6 py-6'>
 				<div className='flex flex-col sm:flex-row justify-between items-center gap-4'>
-					<p className='text-sm text-muted-foreground'>
-						Built with ❤️ for passionate entrepreneurs. Free forever.
+					<p className='flex items-center gap-1 text-sm text-muted-foreground'>
+						@{new Date().getFullYear()} 
+						{/* <Logo size='lg' className="inline-block" />  */}
+						<span className="font-semibold">Component Chain</span>
+						{/* Built with ❤️ for passionate developers. Free forever. */}
 					</p>
-					<div className='flex gap-4'>
-						<a 
+					<div className='flex text-xs md:text-sm text-muted-foreground'>
+						{/* <a 
 							href='https://github.com' 
 							className='text-muted-foreground hover:text-primary transition-colors'
 							aria-label='GitHub'
@@ -27,7 +31,9 @@ export default function Footer() {
 							rel='noopener noreferrer'
 						>
 							<XIcon />
-						</a>
+						</a> */}
+
+						Built by&nbsp;<a href='https://x.com/Calmnrd' className='text-foreground hover:text-primary transition-colors underline underline-offset-3' target='_blank' rel='noopener noreferrer'>Mohit</a>. The source code is available on&nbsp;<a href='https://github.com/CalmNerd/component-chain' className='text-foreground hover:text-primary transition-colors underline underline-offset-3' target='_blank' rel='noopener noreferrer'>GitHub</a>.
 					</div>
 				</div>
 			</div>

@@ -1,53 +1,52 @@
 'use client';
 import { Shield, Database, Mail, CreditCard, Palette, Search } from 'lucide-react';
-import { motion } from 'motion/react';
 import HighlightText from '../ui/highlight-text';
 
 export default function Features() {
 	const features = [
 		{
-			icon: Shield,
-			title: 'Authentication',
-			description: 'Secure user authentication with multiple providers',
-		},
-		{
-			icon: Database,
-			title: 'Database',
-			description: 'Modern database with optimized queries and migrations',
-		},
-		{
-			icon: Mail,
-			title: 'Emails',
-			description: 'Transactional emails, webhooks, and forward management',
-		},
-		{
-			icon: CreditCard,
-			title: 'Payments',
-			description: 'Integrated payment processing with multiple gateways',
+			icon: Search,
+			title: 'Powerful Search',
+			description: 'Find component libraries quickly with advanced filtering and search capabilities',
 		},
 		{
 			icon: Palette,
-			title: 'Styling',
-			description: 'Beautiful UI components with customizable themes',
+			title: 'Curated Collection',
+			description: 'Hand-picked selection of the best Shadcn-inspired component libraries',
 		},
 		{
-			icon: Search,
-			title: 'SEO',
-			description: 'Search engine optimization with meta tags and sitemaps',
+			icon: Shield,
+			title: 'Verified Libraries',
+			description: 'All libraries are verified and tested for quality and reliability',
+		},
+		{
+			icon: Database,
+			title: 'Comprehensive Info',
+			description: 'GitHub stats, tags, frameworks, and links all in one place',
+		},
+		{
+			icon: Mail,
+			title: 'Stay Updated',
+			description: 'Discover new libraries as they\'re added to the collection',
+		},
+		{
+			icon: CreditCard,
+			title: 'Free Forever',
+			description: 'Completely free to browse and discover - no signup required',
 		},
 	];
 
 	return (
 		<section className='pt-16'>
-			<div className='max-w-6xl mx-auto'>
+			<div className='max-w-full mx-auto'>
 				<div className='text-center mb-16 px-4 sm:px-6 lg:px-8'>
 					<h2 className='text-2xl sm:text-3xl md:text-4xl mb-4'>
 						Everything you need to{' '}
-						<HighlightText>ship fast</HighlightText>
+						<HighlightText>build faster</HighlightText>
 					</h2>
 					<p className='text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto'>
-						Built-in authentication, database, emails, and more. Focus on your
-						product, not the infrastructure.
+						Discover and explore the best component libraries. Find the perfect
+						components for your next project without the hassle.
 					</p>
 				</div>
 

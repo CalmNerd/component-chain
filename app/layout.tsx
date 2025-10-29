@@ -49,7 +49,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
-          <div className=' px-3 sm:px-6 lg:px-8'>{children}</div>
+          <div className=' px-3 sm:px-6 lg:px-8 max-w-6xl mx-auto'>{children}</div>
           <Footer />
         </ThemeProvider>
       </body>

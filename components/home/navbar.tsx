@@ -73,7 +73,7 @@ export default function Navbar() {
 							size='sm'
 							className='bg-[#1A1A1A] hover:bg-[#2A2A2A] border border-[#252525] text-white'
 						>
-							<Link href='/docs'>Try it Now</Link>
+							<Link href='/docs'>Submit</Link>
 						</Button>
 
 						{/* GitHub Link */}

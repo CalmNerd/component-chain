@@ -1,9 +1,8 @@
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import { AuroraText } from '@/components/magicui/aurora-text';
+import { AuroraText } from '@/components/ui/aurora-text';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import { AnimatedGridPattern } from '../magicui/animated-grid-pattern';
+import { AnimatedGridPattern } from '../ui/animated-grid-pattern';
 import HighlightText from '@/components/ui/highlight-text';
 
 export default function HeroSection() {
@@ -37,28 +36,28 @@ export default function HeroSection() {
 						in seconds
 					</h1>
 
-					<p className='mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground max-w-xl sm:max-w-2xl mx-auto text-shadow-xs px-4 sm:px-0'>
+					<p className='mt-4 text-sm sm:text-base leading-relaxed text-muted-foreground max-w-xl sm:max-w-2xl mx-auto text-shadow-xs px-4 text-balance sm:text-center'>
 						{/* A curated list of the best Shadcn-inspired libraries, designed to help you ship faster and build better. */}
 						{/* A curated list of the best Shadcn-inspired libraries, designed to help you build and ship lightning-fast. */}
 						A curated list of Shadcn-inspired libraries to help you build and ship faster.
 					</p>
 
-					<div className='mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 z-50 px-4 sm:px-0'>
+					<div className='mt-8 sm:mt-10 flex flex-row items-center justify-center gap-4 sm:gap-x-6 z-50 px-4 sm:px-0'>
 						<Button
 							size='lg'
-							className='w-full sm:w-auto rounded-full shadow-inner shadow-black bg-white px-6 sm:px-8 py-3 sm:py-4 h-10 sm:h-11 text-sm sm:text-base text-black hover:bg-gray-100 focus-visible:outline-offset-2 focus-visible:outline-gray-500 transition-colors text-shadow-xs'
+							className='sm:w-auto rounded-none shadow-inner shadow-black bg-white px-6 sm:px-8 py-3 sm:py-4 h-10 sm:h-11 text-sm sm:text-base text-black hover:bg-gray-100 focus-visible:outline-offset-2 focus-visible:outline-gray-500 transition-colors text-shadow-xs'
 						>
-							<Link href='/docs'>Start Building Now</Link>
+							<Link href='#'>Start Building Now</Link>
 						</Button>
 
 						<Button
 							variant='ghost'
 							size='lg'
 							asChild
-							className='w-full sm:w-auto text-sm sm:text-base font-medium leading-6 text-foreground hover:text-muted-foreground transition-colors h-10 sm:h-11 rounded-full group'
+							className='sm:w-auto text-sm sm:text-base font-medium leading-6 text-foreground hover:text-muted-foreground transition-colors h-10 sm:h-11 rounded-none group'
 						>
 							<Link
-								href='https://github.com/MVP-LaunchPad-Labs/free-ship-fast'
+								href='https://github.com/CalmNerd/component-chain'
 								className='flex items-center justify-center gap-2'
 							>
 								<svg
