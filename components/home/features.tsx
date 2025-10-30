@@ -56,7 +56,7 @@ export default function Features() {
 						return (
 							<div
 								key={index}
-								className='group relative p-4 sm:p-6 border-l border-t border-border bg-background hover:bg-muted/50 transition-colors duration-200'
+								className='group relative p-4 sm:p-6 border-l border-t border-border bg-background hover:bg-muted/50 hover:transition-colors'
 							>
 								{/* Icon */}
 								<div className='inline-flex p-2 sm:p-3 border border-border bg-muted mb-3 sm:mb-4'>

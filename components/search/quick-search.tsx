@@ -210,8 +210,8 @@ export default function QuickSearch({
   const hasFilters = hasActiveFilters(filters);
 
   return (
-    <section className={pathname === '/' ? '' : ''}>
-      <div className='max-w-full mx-auto'>
+    <section className="">
+      <div className='min-w-full flex flex-col'>
         {/* Header - Only show on home page */}
         {pathname === '/' && (
           <div className='text-center my-12'>
@@ -484,7 +484,7 @@ export default function QuickSearch({
             )}
           </>
         ) : (
-          <div className='text-center py-12 text-muted-foreground'>
+          <div className='text-center py-12 w-full text-muted-foreground'>
             <p className='text-lg mb-2'>No libraries found</p>
             <p className='text-sm'>
               {hasFilters

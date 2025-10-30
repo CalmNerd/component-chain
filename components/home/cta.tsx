@@ -22,7 +22,7 @@ export default function CTA() {
 				duration={3}
 				className={cn(
 					"hidden md:block [mask-image:radial-gradient(400px_circle_at_top_left,white,rgba(255,255,255,0.6),transparent)]",
-					"inset-x-0 inset-y-0 h-[200%]"
+					"inset-x-[-1px] inset-y-0 h-[200%]"
 				)}
 			/>
 			<AnimatedGridPattern
@@ -31,7 +31,7 @@ export default function CTA() {
 				duration={3}
 				className={cn(
 					"hidden md:block [mask-image:radial-gradient(400px_circle_at_top_right,white,rgba(255,255,255,0.6),transparent)]",
-					"inset-x-[8px] inset-y-0 h-[200%]"
+					"inset-x-[32px] inset-y-0 h-[200%]"
 				)}
 			/>
 			<div className='max-w-full mx-auto px-4 sm:px-6 lg:px-8'>

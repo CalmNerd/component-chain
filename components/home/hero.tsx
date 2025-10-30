@@ -44,7 +44,7 @@ export default function HeroSection() {
 
 					<div className='mt-8 sm:mt-10 flex flex-row items-center justify-center gap-4 sm:gap-x-6 z-50 px-4 sm:px-0'>
 						<Button
-							className='sm:w-auto text-sm sm:text-base shadow-inner shadow-black px-6 sm:px-8 py-1 sm:py-4 transition-colors text-shadow-xs'
+							className='sm:w-auto text-sm sm:text-base shadow-inner shadow-black px-6 sm:px-8 py-1 sm:py-4 text-shadow-xs'
 						>
 							<Link href='#'>Start Now</Link>
 						</Button>
@@ -52,7 +52,7 @@ export default function HeroSection() {
 						<Button
 							variant='outline'
 							asChild
-							className='sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-1 sm:py-4 font-medium transition-colors group'
+							className='sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-1 sm:py-4 font-medium group'
 						>
 							<Link
 								href='https://github.com/CalmNerd/component-chain'

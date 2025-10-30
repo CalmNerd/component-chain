@@ -22,7 +22,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
 				onValueChange={(value) => setIsOpen(value === `item-${index}`)}
 			>
 				<AccordionItem value={`item-${index}`} className='border-none'>
-					<AccordionTrigger className='p-6 cursor-pointer text-left hover:bg-muted/50 transition-colors hover:no-underline flex justify-between items-center rounded-none'>
+					<AccordionTrigger className='p-6 cursor-pointer text-left hover:bg-muted/50 hover:transition-colors hover:no-underline flex justify-between items-center rounded-none'>
 						<h3 className='font-medium text-sm leading-relaxed pr-4'>{question}</h3>
 						<div className='flex-shrink-0'>
 							<svg 

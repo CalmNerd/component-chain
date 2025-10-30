@@ -65,13 +65,13 @@ export default function FilterResultsPage() {
   };
 
   return (
-    <main className='max-w-full mx-auto flex flex-col gap-8 min-h-full'>
+    <main className='max-w-full flex flex-col gap-8 min-h-full'>
       <div className='flex-1'>
-        <section className=''>
+        <section className='min-w-full'>
           <div className='max-w-full mx-auto px-4 sm:px-6 lg:px-8'>
             {/* Dynamic Header */}
             <div className='text-center py-12'>
-              <h2 className='text-2xl sm:text-3xl md:text-4xl mb-4'>
+              <h2 className='font-librebaskerville text-2xl sm:text-3xl md:text-4xl mb-4'>
                 Libraries matching:{' '}
                 <HighlightText>{getHeaderText()}</HighlightText>
               </h2>

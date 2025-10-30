@@ -13,7 +13,7 @@ interface HighlightTextProps {
 export default function HighlightText({
     children,
     className = '',
-    highlightColor = 'bg-white',
+    highlightColor = 'bg-gray-200',
     textColor = '#000000',
     delay = 0.5,
     duration = 0.8

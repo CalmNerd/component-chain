@@ -51,7 +51,7 @@ export function LibraryCard({
   return (
     <div
       className={cn(
-        'group relative border-r border-b border-border bg-background hover:bg-muted/50 transition-colors duration-200 p-4 sm:p-6',
+        'group relative border-r border-b border-border bg-background hover:bg-muted/50 hover:transition-all p-4 sm:p-6',
         isFirstRowMobile && 'border-t',
         isFirstRowTablet && !isFirstRowMobile && 'md:border-t',
         isFirstRowDesktop && !isFirstRowTablet && 'lg:border-t',
@@ -62,7 +62,7 @@ export function LibraryCard({
       <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
         {/* Logo */}
         {library.logo && (
-          <div className="relative flex-shrink-0 w-12 h-12 border border-border bg-muted p-1">
+          <div className="relative flex-shrink-0 w-12 h-12 border border-border bg-muted  p-1">
             <Image
               src={library.logo}
               alt={`${library.name} logo`}
@@ -81,7 +81,7 @@ export function LibraryCard({
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-2">
             <div className='flex flex-col min-w-0'>
-              <h3 className="line-clamp-1 overflow-hidden text-lg sm:text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+              <h3 className="line-clamp-1 overflow-hidden text-lg sm:text-xl font-semibold text-foreground group-hover:text-primary ">
                 {primaryLink ? (
                   <Link
                     href={primaryLink}
@@ -96,13 +96,13 @@ export function LibraryCard({
                 )}
               </h3>
               {githubRepoInfo && (
-                <div className="w-fit text-xs rounded-full bg-muted px-1 py-0.5 flex items-center gap-1">
+                <div className="w-fit text-xs rounded-full bg-muted px-1 py-0.5 flex items-center gap-1 ">
                   <GithubRoundedIcon className='size-3 inline-block shrink-0' />
                   <Link
                     href={library.githubLink!}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs break-words line-clamp-1 hover:text-primary hover:underline transition-colors"
+                    className="text-xs break-words line-clamp-1 hover:text-primary hover:underline "
                     onClick={(e) => e.stopPropagation()}
                   >
                     {githubRepoInfo}
@@ -118,7 +118,7 @@ export function LibraryCard({
                   href={library.webLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary "
                   aria-label={`Visit ${library.name} website`}
                 >
                   <ExternalLinkIcon className="size-5" />
@@ -129,7 +129,7 @@ export function LibraryCard({
                   href={library.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary "
                   aria-label={`View ${library.name} on GitHub`}
                 >
                   <GithubIcon className="size-4.5" />
@@ -161,13 +161,13 @@ export function LibraryCard({
           <Badge
             key={index}
             variant="secondary"
-            className="text-xs"
+            className="text-xs "
           >
             {tag}
           </Badge>
         ))}
         {library.tags.length > 3 && (
-          <Badge variant="secondary" className="text-xs">
+          <Badge variant="secondary" className="text-xs ">
             +{library.tags.length - 3} more
           </Badge>
         )}

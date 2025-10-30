@@ -40,7 +40,7 @@ export default function Footer() {
 							<XIcon />
 						</a> */}
 
-						Built by&nbsp;<a href='https://x.com/Calmnrd' className='text-foreground hover:text-primary transition-colors underline underline-offset-3' target='_blank' rel='noopener noreferrer'>Mohit</a>. The source code is available on&nbsp;<a href='https://github.com/CalmNerd/component-chain' className='text-foreground hover:text-primary transition-colors underline underline-offset-3' target='_blank' rel='noopener noreferrer'>GitHub</a>.
+						Built by&nbsp;<a href='https://x.com/Calmnrd' className='text-foreground hover:text-primary hover:transition-colors underline underline-offset-3' target='_blank' rel='noopener noreferrer'>Mohit</a>. The source code is available on&nbsp;<a href='https://github.com/CalmNerd/component-chain' className='text-foreground hover:text-primary hover:transition-colors underline underline-offset-3' target='_blank' rel='noopener noreferrer'>GitHub</a>.
 					</div>
 				</div>
 			</div>

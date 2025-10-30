@@ -27,7 +27,7 @@ export default function Navbar() {
 	return (
 		<header
 			id='nd-nav'
-			className='fixed py-1 top-0 z-[9999] -left-2 right-0 border-b transition-colors'
+			className='fixed py-1 top-0 z-[9999] -left-2 right-0 border-b'
 			aria-label='Main'
 		>
 			<div className='max-w-6xl px-2 mx-auto'>
