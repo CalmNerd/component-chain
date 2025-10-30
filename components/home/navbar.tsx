@@ -59,12 +59,12 @@ export default function Navbar() {
 					{/* Right Side Actions */}
 					<div className='flex flex-row items-center justify-end gap-1.5 flex-1'>
 						{/* Try it Now Button - Hidden on mobile, shown in menu */}
-						<Button
+					<Button
 							size='sm'
 							variant='ghost'
 							asChild
 						>
-							<Link href='#'>Submit Library</Link>
+						<Link href='/submit-library'>Submit Library</Link>
 						</Button>
 
 						<div className='h-4 w-px bg-border'></div>

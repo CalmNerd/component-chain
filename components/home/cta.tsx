@@ -49,8 +49,9 @@ export default function CTA() {
 						<Button
 							size='lg'
 							className='px-3 sm:px-8 w-auto'
+							asChild
 						>
-							Submit a Library
+							<a href='/submit-library'>Submit a Library</a>
 						</Button>
 						<Button
 							variant='outline'
